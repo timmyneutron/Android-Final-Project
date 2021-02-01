@@ -1,0 +1,144 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<LinearLayout
+xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context=".DetailActivity"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:background="#FFFFFFFF"
+    android:layout_marginTop="55dp">
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:scrollbars="vertical">
+
+        <TextView
+            android:id="@+id/placeVoteScore"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:textSize="24sp"
+            android:textStyle="bold"
+            android:gravity="center_vertical"
+            android:paddingStart="10dp"/>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_gravity="center_vertical">
+
+            <ImageButton
+                android:id="@+id/detailUpVoteArrow"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:backgroundTint="@color/white"
+                android:src="@drawable/ic_up_arrow"/>
+
+            <ImageButton
+                android:id="@+id/detailDownVoteArrow"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:backgroundTint="@color/white"
+                android:src="@drawable/ic_down_arrow"/>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_marginTop="10dp"
+            android:layout_marginBottom="10dp">
+
+            <TextView
+                android:id="@+id/detailCreator"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textStyle="bold"
+                android:layout_marginBottom="10dp"
+                android:textSize="16sp"/>
+
+            <TextView
+                android:id="@+id/detailDescription"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:ellipsize="none"
+                android:maxLines="10"
+                android:scrollbars="vertical"
+                android:scrollHorizontally="false"
+                android:paddingEnd="10dp"/>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/editDeleteButtons"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="right"
+        android:visibility="gone">
+
+        <Button
+            android:id="@+id/deletePlaceButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Delete"/>
+    </LinearLayout>
+
+    <EditText
+        android:id="@+id/addCommentET"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Add comment..."
+        android:inputType="text"
+        android:visibility="gone"/>
+
+    <Button
+        android:id="@+id/submitCommentButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="left"
+        android:text="Submit"
+        android:visibility="gone"/>
+
+    <TextView
+        android:id="@+id/nyTimesText"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="From the New York Times:"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        android:padding="10dp"
+        android:visibility="gone"/>
+
+    <TextView
+        android:id="@+id/nytimesLink1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:linksClickable="true"
+        android:textSize="16sp"
+        android:padding="10dp"/>
+
+    <TextView
+        android:id="@+id/commentsText"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Comments:"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        android:padding="10dp"/>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/commentRecyclerView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="70dp"
+        />
+
+</LinearLayout>

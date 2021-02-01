@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    tools:showIn="@layout/activity_add"
+    android:padding="10dp">
+
+    <TextView
+        android:id="@+id/addTitle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="24sp"
+        android:text="Title:"
+        app:layout_constraintTop_toTopOf="parent"/>
+
+    <EditText
+        android:id="@+id/titleET"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Add title..."
+        android:inputType="text"
+        app:layout_constraintTop_toBottomOf="@id/addTitle"/>
+
+    <TextView
+        android:id="@+id/addDescription"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="24sp"
+        android:text="Description:"
+        app:layout_constraintTop_toBottomOf="@id/titleET"/>
+
+    <EditText
+        android:id="@+id/descriptionET"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Add description..."
+        android:inputType="textMultiLine"
+        android:maxLines="10"
+        app:layout_constraintTop_toBottomOf="@id/addDescription"/>
+
+    <TextView
+        android:id="@+id/addAddress"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="24sp"
+        android:text="Address:"
+        app:layout_constraintTop_toBottomOf="@id/descriptionET"/>
+
+    <EditText
+        android:id="@+id/addressET"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Add address..."
+        android:inputType="textMultiLine"
+        app:layout_constraintTop_toBottomOf="@id/addAddress"/>
+
+    <TextView
+        android:id="@+id/addCategory"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="24sp"
+        android:text="Category:"
+        app:layout_constraintTop_toBottomOf="@id/addressET"
+        app:layout_constraintStart_toStartOf="parent"/>
+
+    <Spinner
+        android:id="@+id/categorySpinner"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/addCategory"
+        app:layout_constraintStart_toStartOf="parent"
+        />
+
+
+    <Button
+        android:id="@+id/addSubmitButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Submit"
+        app:layout_constraintTop_toBottomOf="@id/categorySpinner"
+        app:layout_constraintEnd_toEndOf="parent"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
